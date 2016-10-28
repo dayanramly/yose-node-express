@@ -10,5 +10,12 @@
 	<div id="gate-3">
 		<p id="ship-3">Trion</p>
 	</div>
+	<input type="text" id="ship">
+	<button type="submit" id="dock" onclick="changeDock()">Dock</button>
+	<script type="text/javascript">
+		function changeDock(){
+			document.getElementById("ship-1").innerHTML = document.getElementById("ship").value;
+		}
+	</script>
 </body>
 </html>
