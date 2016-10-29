@@ -1,0 +1,26 @@
+.hidden{
+	display: none !important;
+	padding: 10px;
+}
+.occupied{
+	background: #eeeeee;
+	padding: 10px;
+}
+.free{
+	background: #fff;
+	padding: 10px;
+}
+#gate-1, #gate-2, #gate-3{
+	background: #eeeeee;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+#info{
+	display: block;
+	margin-top: 15px;
+	background: yellow;
+	padding: 10px;
+}
+#ship{
+	margin-top: 15px;
+}

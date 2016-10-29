@@ -1,8 +1,9 @@
 <html>
+<link rel="stylesheet" href="css/astroport.css">
 <body>
 	<h1 id="astroport-name"> Astroport </h1>
-	<div id="gate-1">
-		<p id="ship-1">Ones</p>
+	<div id="gate-1" class="free">
+		<p id="ship-1" class="">Ones</p>
 	</div>
 	<div id="gate-2">
 		<p id="ship-2">Twion</p>
@@ -10,11 +11,26 @@
 	<div id="gate-3">
 		<p id="ship-3">Trion</p>
 	</div>
-	<input type="text" id="ship">
+	<input type="text" id="ship" onfocus="removeLink(this)">
 	<button type="submit" id="dock" onclick="changeDock()">Dock</button>
+
+	<a href="#" id="info" class="hidden">The ship has been docked at gate 1</a>
 	<script type="text/javascript">
+		var ships = document.getElementById("ship");
+		var ships1 = document.getElementById("ship-1");
+		var gate1 = document.getElementById("gate-1");
+		var infos = document.getElementById("info");
+		var counter = 0;
 		function changeDock(){
-			document.getElementById("ship-1").innerHTML = document.getElementById("ship").value;
+			ships1.innerHTML = ships.value;
+			gate1.classList.toggle('occupied');
+			infos.className = " ";
+			counter += 1;
+		}
+		if(counter = 1){
+			function removeLink(x) {
+				infos.className = "hidden";
+			}
 		}
 	</script>
 </body>
