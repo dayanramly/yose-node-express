@@ -14,6 +14,8 @@
 	background: #eeeeee;
 	padding: 10px;
 	border: 1px solid #ddd;
+	display: inline-block;
+	width: 30%;
 }
 #info{
 	display: block;

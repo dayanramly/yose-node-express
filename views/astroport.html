@@ -2,14 +2,17 @@
 <link rel="stylesheet" href="css/astroport.css">
 <body>
 	<h1 id="astroport-name"> Astroport </h1>
-	<div id="gate-1" class="free occupied">
-		<p id="ship-1" class="">Ones</p>
+	<div id="gate-1" class="free">
+		<h4>Ship</h4>
+		<p id="ship-1" class="">-- None --</p>
 	</div>
 	<div id="gate-2" class="free">
-		<p id="ship-2">Twion</p>
+		<h4>Ship</h4>
+		<p id="ship-2">-- None --</p>
 	</div>
 	<div id="gate-3" class="free">
-		<p id="ship-3">Trion</p>
+		<h4>Ship</h4>
+		<p id="ship-3">-- None --</p>
 	</div>
 	<input type="text" id="ship" onfocus="removeLink(this)">
 	<button type="submit" id="dock" onclick="changeDock()">Dock</button>
@@ -18,21 +21,38 @@
 	<script type="text/javascript">
 		var ships = document.getElementById("ship");
 		var ships1 = document.getElementById("ship-1");
+		var ships2 = document.getElementById("ship-2");
+		var ships3 = document.getElementById("ship-3");
 		var gate1 = document.getElementById("gate-1");
+		var gate2 = document.getElementById("gate-2");
+		var gate3 = document.getElementById("gate-3");
 		var infos = document.getElementById("info");
 		var counter = 0;
+		var a = 1;
+
 		function changeDock(){
-			ships1.innerHTML = ships.value;
-			gate1.classList.toggle('free');
-			gate1.classList.toggle('occupied');
+			a = counter%3;
+			
+			if (a == 0){
+				ships1.innerHTML = ships.value;
+				gate1.classList.toggle('free');
+				gate1.classList.toggle('occupied');
+			} else if (a == 1){
+				ships2.innerHTML = ships.value;
+				gate2.classList.toggle('free');
+				gate2.classList.toggle('occupied');
+			}else if (a == 2){
+				ships3.innerHTML = ships.value;
+				gate3.classList.toggle('free');
+				gate3.classList.toggle('occupied');
+			}
 			infos.className = " ";
 			counter += 1;
 		}
-		if(counter = 1){
-			function removeLink(x) {
-				infos.className = "hidden";
-			}
+		function removeLink(x) {
+			infos.className = "hidden";
 		}
+		
 	</script>
 </body>
 </html>
