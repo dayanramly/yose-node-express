@@ -14,7 +14,7 @@ primeFactorsOf = function(number) {
         doLoop = ( x != number );
         number /= x;
     	}
-    	console.log(factors);
+    	//console.log(factors);
     return factors;
 };
 
