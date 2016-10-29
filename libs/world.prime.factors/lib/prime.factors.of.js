@@ -1,5 +1,5 @@
 primeFactorsOf = function(number) {
-
+	//console.log(number);
 	number = Math.floor(number);
     var root, factors = [], x, sqrt = Math.sqrt, doLoop = 1 < number;
     while( doLoop ){
@@ -13,7 +13,8 @@ primeFactorsOf = function(number) {
         factors.push(x);
         doLoop = ( x != number );
         number /= x;
-    }
+    	}
+    	console.log(factors);
     return factors;
 };
 
