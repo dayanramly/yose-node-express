@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="css/astroport.css">
 <body>
 	<h1 id="astroport-name"> Astroport </h1>
-	<div id="gate-1" class="occupied">
+	<div id="gate-1" class="free">
 		<h4>Ship</h4>
 		<p id="ship-1" class="">Goldorak</p>
 	</div>
@@ -35,8 +35,7 @@
 
 			if (a == 0){
 				ships1.innerHTML = ships.value;
-				gate1.classList.toggle('occupied');
-				gate1.classList.toggle('free');
+				gate1.classList.add('occupied');
 			} else if (a == 1){
 				ships2.innerHTML = ships.value;
 				gate2.classList.toggle('free');
