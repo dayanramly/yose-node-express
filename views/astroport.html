@@ -23,6 +23,7 @@
 		var counter = 0;
 		function changeDock(){
 			ships1.innerHTML = ships.value;
+			gate1.classList.toggle('free');
 			gate1.classList.toggle('occupied');
 			infos.className = " ";
 			counter += 1;
