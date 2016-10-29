@@ -8,6 +8,10 @@ var primeFactors = function(request, response) {
     {
     	var result = { number: number, error: 'not a number' };
 
+    } else if(number > 1000000) {
+
+    	var result = { number: parseInt(number), error: 'too big number (>1e6)' };
+
     } else {
 
     	var number = parseInt(number);

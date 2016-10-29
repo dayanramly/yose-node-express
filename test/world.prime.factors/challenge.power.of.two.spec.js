@@ -41,5 +41,18 @@ describe('Passing the Power of Two level:', function() {
             done(); 
         });
     });
+
+    it('returns error when number is to big', function(done) {
+        request('http://localhost:7000/primeFactors?number=1000001', function(error, response, body) {
+            expect(body).to.equal( JSON.stringify( 
+                {
+                    "number" : 1000001,
+                    "error" : "too big number (>1e6)"
+                } 
+            ));
+            
+            done(); 
+        });
+    });
    
 });
