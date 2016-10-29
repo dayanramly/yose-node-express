@@ -1,5 +1,5 @@
-var chai = require('chai');
-var expect = chai.expect;
+// var chai = require('chai');
+// var expect = chai.expect;
 
-var load = require('../../../public/js/minesweeper/load');
+// var load = require('../../../public/js/minesweeper/load');
 
