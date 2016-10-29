@@ -6,7 +6,7 @@ var primeFactors = function(request, response) {
     var decomposition = primeFactorsOf(number);
 
 	response.setHeader('Content-Type', 'application/json');
-    response.send({ number: number, decomposition: decomposition });
+    response.send(JSON.stringify({ number: number, decomposition: decomposition }));
 };
 
 module.exports = primeFactors;
